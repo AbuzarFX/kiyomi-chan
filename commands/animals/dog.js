@@ -3,13 +3,13 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     config: {
-    name: "bird",
+    name: "puppy",
     category: "animals",
-    description: "Sends a random fact and an image of a bird.",
+    description: "Sends a random fact and an image of a dog.",
     },
     run: async (client, message, args) => {
-        const url = "https://some-random-api.ml/img/birb";
-        const facts = "https://some-random-api.ml/facts/bird"
+        const url = "https://some-random-api.ml/img/dog";
+        const facts = "https://some-random-api.ml/facts/dog"
 
         let image, response;
         let fact, responses;
@@ -25,7 +25,7 @@ module.exports = {
         }
 
         const embed = new MessageEmbed()
-            .setTitle(`Random Bird Image and Fact`)
+            .setTitle(`Here's a dog 🐶 and a random fact about it!`)
             .setColor(`#f3f3f3`)
             .setDescription(fact.fact)
             .setImage(image.link)
