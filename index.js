@@ -163,6 +163,7 @@ bot.on('guildMemberAdd', async member => {
 
     if (!wChan) return;
 
+    let font32 = await jimp.loadFont(jimp.FONT_SANS_32_WHITE)
     let font64 = await jimp.loadFont(jimp.FONT_SANS_64_WHITE)
     let bfont64 = await jimp.loadFont(jimp.FONT_SANS_64_BLACK)
     let mask = await jimp.read('https://i.imgur.com/552kzaW.png')
@@ -174,12 +175,12 @@ bot.on('guildMemberAdd', async member => {
         avatar.mask(mask)
         welcome.resize(1000, 300)
 
-        welcome.print(font64, 265, 55, `Welcome ${member.user.username}`)
+        welcome.print(font32, 265, 55, `Welcome ${member.user.username}`)
         welcome.print(bfont64, 265, 125, `To ${member.guild.name}`)
         welcome.print(font64, 265, 195, `${member.guild.memberCount} users now!`)
         welcome.composite(avatar, 40, 55).write('Welcome2.png')
         try {
-          member.guild.channels.cache.get(wChan).send(`**Welcome to ${member.guild.name}, We are now ${member.guild.memberCount} members strong!**`, { files: ["Welcome2.png"] })
+          member.guild.channels.cache.get(wChan).send(`**Welcome to ${member.guild.name}, We are now ${member.guild.memberCount} members strong! :tada:**`, { files: ["Welcome2.png"] })
         } catch (e) {
           
         }
