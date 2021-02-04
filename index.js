@@ -176,7 +176,7 @@ bot.on('guildMemberAdd', async member => {
 
         welcome.print(font64, 265, 55, `Welcome ${member.user.username}`)
         welcome.print(bfont64, 265, 125, `To ${member.guild.name}`)
-        welcome.print(font64, 265, 125, `There are now ${member.guild.memberCount} users`)
+        welcome.print(font64, 265, 195, `${member.guild.memberCount} users now!`)
         welcome.composite(avatar, 40, 55).write('Welcome2.png')
         try {
             member.guild.channels.cache.get(wChan).send(``, { files: ["Welcome2.png"] })
