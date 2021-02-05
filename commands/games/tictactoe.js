@@ -25,7 +25,7 @@ module.exports = {
             const verification = await verify(message.channel, opponent);
             if (!verification) {
                 ops.games.delete(message.channel.id);
-                return message.channel.send(`**Looks Like ${opponent} Doesnt Wants To Play!**`);
+                return message.channel.send(`**Looks Like ${opponent} Doesnt Want To Play!**`);
             }
             const sides = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
             const taken = [];
