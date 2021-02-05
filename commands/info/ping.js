@@ -16,7 +16,7 @@ module.exports = {
             const embed = new MessageEmbed()
                 .setAuthor("Pong!")
                 .setColor("GREEN")
-                .setDescription(`<:hourglass_flowing_sand:699128011743690794> ${ping}\n\n💓 ${Math.round(bot.ws.ping)}`)
+                .setDescription(`<:hourglass_flowing_sand:699128011743690794> ${ping}ms\n\n💓 ${Math.round(bot.ws.ping)}ms`)
             message.channel.send(embed)
             m.delete()
         })
