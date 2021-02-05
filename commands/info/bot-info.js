@@ -8,7 +8,7 @@ module.exports = {
     aliases: ["info"],
     },
 
-    execute(message, args, client) {
+     run: async (client, message, args) => {
         {
             const embed = new MessageEmbed()
                 .setThumbnail(client.user.displayAvatarURL())
