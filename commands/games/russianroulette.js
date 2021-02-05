@@ -25,7 +25,7 @@ module.exports = {
 				const verification = await verify(message.channel, opponent);
 				if (!verification) {
 					ops.games.delete(message.channel.id);
-					return message.channel.send(`**Looks Like ${opponent} Doesnt Wants To Play!**`);
+					return message.channel.send(`**Looks Like ${opponent} Doesnt Want To Play!**`);
 				}
 			}
 			let userTurn = true;
