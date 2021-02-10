@@ -16,14 +16,14 @@ module.exports = {
             return message.channel.send("**Please Enter A Query!**");
 
         const embed = new MessageEmbed()
-            .setColor("GREEN")
+            .setColor("#ff0000")
             .setTitle(`Poll 📢`)
             .setFooter(message.member.displayName, message.author.displayAvatarURL())
             .setDescription(args.join(' '))
         var msg = await message.channel.send(embed);
 
-        await msg.react('✅');
-        await msg.react('❌');
+        await msg.react('788102360936218685');
+        await msg.react('796376380560113675');
 
         message.delete({ timeout: 1000 });
     }
