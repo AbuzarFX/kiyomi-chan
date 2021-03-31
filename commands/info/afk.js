@@ -5,7 +5,8 @@ const { afk } = require("../../Collection")
 module.exports = {
     config: {
         name: "afk",
-        description: "Used to set AFK status."
+        description: "Used to set AFK status.",
+        category: "info",
     },
     run: async (bot, message, args) => {
 
