@@ -210,38 +210,6 @@ const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
 
-bot.on('message', async(message) => {
 
-    if(!message.guild || message.author.bot) return;
-
-    const mentionedMember = message.mentions.members.first();
-    if(mentionedMember) {
-        const data = afk.get(mentionedMember.id)
-
-        if(data) {
-            const [timestamp, reason] = data;
-
-            const timeAgo = moment(timestamp).fromNow();
-
-            message.lineReply({ embed: {
-                color: "#ff0000",
-                description: `${mentionedMember} is currently AFK (${timeAgo})\nReason: \`${reason}\``
-            }
-            })
-        }
-    }
-
-    const getData = afk.get(message.author.id);
-    if(getData) {
-        afk.delete(message.author.id);
-
-        message.lineReplyNoMention({ embed: {
-            color: "#ff0000",
-            description: `Welcome back ${message.member}, your AFK status has been removed!`
-        }})
-    }
-
-
-})
 
 bot.login(TOKEN);
