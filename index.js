@@ -6,7 +6,6 @@ const dbl = new DBL(DBL_API_KEY)
 const fs = require("fs");
 const db = require('quick.db');
 const jimp = require('jimp');
-const moment = require("moment");
 bot.phone = new Collection();
 bot.commands = new Collection();
 bot.aliases = new Collection();
