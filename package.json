@@ -47,11 +47,11 @@
     "simple-youtube-api": "^5.2.1",
     "snekfetch": "^4.0.4",
     "something-random-on-discord": "0.0.2",
+    "sourcebin": "^4.1.3",
     "vacefron": "^3.4.0",
     "weather": "^1.0.4",
     "weather-js": "^2.0.0",
     "wikijs": "^6.0.0",
     "ytdl-core": "^2.1.5"
-  },
-  "devDependencies": {}
+  }
 }
