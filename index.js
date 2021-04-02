@@ -4,6 +4,7 @@ const bot = new Client({ disableMentions: 'everyone' });
 const DBL = require('dblapi.js');
 const dbl = new DBL(DBL_API_KEY)
 const fs = require("fs");
+require('discord-reply')
 const db = require('quick.db');
 const jimp = require('jimp');
 bot.phone = new Collection();
